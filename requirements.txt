@@ -1,0 +1,6 @@
+groq    # access open source llm
+SpeechRecognition
+pyttsx3 
+pyaudio
+python-dotenv
+streamlit
