@@ -1,0 +1,122 @@
+[
+    {
+        "student_id": 101,
+        "name": "Rahul Sharma",
+        "age": 20,
+        "department": "Computer Science",
+        "marks": {
+            "python": 87,
+            "sql": 92,
+            "machine_learning": 78
+        },
+        "funny_comment": "Thinks SQL is a breakfast cereal"
+    },
+    {
+        "student_id": 102,
+        "name": "Priya Patel",
+        "age": 21,
+        "department": "Data Science",
+        "marks": {
+            "python": 95,
+            "sql": 98,
+            "machine_learning": 94
+        },
+        "funny_comment": "Has more browser tabs than actual thoughts"
+    },
+    {
+        "student_id": 103,
+        "name": "Aman Verma",
+        "age": 20,
+        "department": "Mechanical",
+        "marks": {
+            "python": 72,
+            "sql": 68,
+            "machine_learning": 75
+        },
+        "funny_comment": "Studies only when Wi-Fi is down"
+    },
+    {
+        "student_id": 104,
+        "name": "Sneha Rao",
+        "age": 19,
+        "department": "Computer Science",
+        "marks": {
+            "python": 91,
+            "sql": 89,
+            "machine_learning": 93
+        },
+        "funny_comment": "Debugs code by staring at the screen"
+    },
+    {
+        "student_id": 105,
+        "name": "Rohit Kumar",
+        "age": 22,
+        "department": "Electronics",
+        "marks": {
+            "python": 64,
+            "sql": 70,
+            "machine_learning": 61
+        },
+        "funny_comment": "Submits assignments at 11:59 PM with Olympic speed"
+    },
+    {
+        "student_id": 106,
+        "name": "Neha Singh",
+        "age": 20,
+        "department": "Information Technology",
+        "marks": {
+            "python": 88,
+            "sql": 85,
+            "machine_learning": 90
+        },
+        "funny_comment": "Knows every shortcut except the shortcut to success"
+    },
+    {
+        "student_id": 107,
+        "name": "Vikram Joshi",
+        "age": 21,
+        "department": "Data Science",
+        "marks": {
+            "python": 76,
+            "sql": 81,
+            "machine_learning": 74
+        },
+        "funny_comment": "Uses AI to explain why he did not study AI"
+    },
+    {
+        "student_id": 108,
+        "name": "Anjali Mehta",
+        "age": 19,
+        "department": "Artificial Intelligence",
+        "marks": {
+            "python": 98,
+            "sql": 96,
+            "machine_learning": 99
+        },
+        "funny_comment": "Teacher suspects she is secretly a robot"
+    },
+    {
+        "student_id": 109,
+        "name": "Karan Gupta",
+        "age": 22,
+        "department": "Civil Engineering",
+        "marks": {
+            "python": 55,
+            "sql": 62,
+            "machine_learning": 58
+        },
+        "funny_comment": "Believes attendance is a theoretical concept"
+    },
+    {
+        "student_id": 110,
+        "name": "Pooja Nair",
+        "age": 20,
+        "department": "Artificial Intelligence",
+        "marks": {
+            "python": 93,
+            "sql": 91,
+            "machine_learning": 95
+        },
+        "funny_comment": "Names every ML model like a pet"
+    }
+]
