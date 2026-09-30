@@ -1,7 +1,7 @@
 # RAG based Website assistant
 
 import streamlit as st
-from rag import process_urls
+from rag import process_urls, generate_answer
 
 st.title("RAG based Website assistant")
 
@@ -21,3 +21,15 @@ if process_url_button:
     else:
         for status in process_urls(urls):
             placeholder.text(status)
+
+query = placeholder.text_input("question")
+
+if query:
+    answer, sources  = generate_answer(query)
+
+    st.header("Answer")
+    st.write(answer)
+    if sources:
+        st.header("Sources")
+        for s in sources.split("\n"):
+            st.write(s)

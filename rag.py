@@ -60,7 +60,7 @@ def process_urls(urls):
 
     yield "creating chunks by splitting..."
     splitter = RecursiveCharacterTextSplitter(
-        separator = ["\n\n", "\n", ".", " "],
+        separators = ["\n\n", "\n", ".", " "],
         chunk_size = CHUNK_SIZE,
         chunk_overlap = 100
     )
@@ -73,3 +73,32 @@ def process_urls(urls):
     vector_store.add_documents(docs, ids = ids)
 
     yield "Successfully store docs in ChromaDB"
+
+def generate_answer(query):
+    if not vector_store:
+        raise RuntimeError("Vector database is Empty")
+
+    retriever = vector_store.as_retriever()
+
+    docs = retriever.invoke(query)
+
+    content = "\n\n".join([doc.page_content for doc in docs])
+
+    prompt = f"""
+                You are a helpfull assistant.
+                Answer the question only using the content given below.
+                if anser is not present, just say "I don't know" but don't halluciante.
+
+                content:
+                {content}
+
+                question:
+                {query}
+
+"""
+
+    response = llm.invoke(prompt)
+
+    sources = "\n".join(list(set([doc.metadata.get("source", "") for doc in docs])))
+
+    return response.content.strip(), sources
