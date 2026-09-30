@@ -25,11 +25,14 @@ if process_url_button:
 query = placeholder.text_input("question")
 
 if query:
-    answer, sources  = generate_answer(query)
+    try:
+        answer, sources  = generate_answer(query)
 
-    st.header("Answer")
-    st.write(answer)
-    if sources:
-        st.header("Sources")
-        for s in sources.split("\n"):
-            st.write(s)
+        st.header("Answer")
+        st.write(answer)
+        if sources:
+            st.header("Sources")
+            for s in sources.split("\n"):
+                st.write(s)
+    except Exception as e:
+        placeholder.text("Please first click on process URL")
